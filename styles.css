@@ -1,0 +1,96 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+#main{
+    height: 100vh;
+    overflow-x: hidden;
+    overflow-y: auto; 
+    perspective: 10px;  
+    
+    /* we use this for giving 3d effect <perspective: 10px;>*/
+}
+.part1{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    transform-style: preserve-3d;
+    z-index: -1;
+}
+.background{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    object-fit: cover;
+    /* <object-fit: cover; > used for fitting image in container   */
+    transform: translateZ(-40px) scale(5);
+    /*< transform: translateZ(-40px) scale(5);>  transform: translateZ(-40px) iski help se jo image hai hum usko dur kiya hai z axis me or scale(5) iski help se object ko bada kiya hai*/
+
+}
+.foreground{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    object-fit: cover;
+    transform: translateZ(-20px) scale(3);
+}
+h1{
+    position: absolute;
+    top: 5rem;
+    font-size: 10rem;
+    letter-spacing: 4px;
+    color: white;
+    text-shadow: 0 0 10px rgba(0,0,0,0.3);
+}
+section{
+    background-color: rgb(45,45,45);
+    color: white;
+    padding: 5rem 0;
+}
+.sectionhadding{
+    font-size: 5rem;
+    padding: 0 10rem;
+}
+
+
+.text{
+    font-size: 1.5rem;
+    padding: 0 10rem;
+    margin: 5rem 0;
+}
+
+.bg{
+    position: relative;
+    width: 100%;
+    background-attachment: fixed;
+    /* background-attachment: fixed; iski help se jo photo lagi hai wo fix ho jaya ge or jo text or para hai wo move kara ga */
+    background-size: cover;
+    background-position: center;
+    height: 500px
+    ;
+}
+.decs{
+    position: absolute;
+    background-color: white;
+    padding: 0.5rem 2.5rem;
+    top: 50%;
+    left: 50%;
+    transform:  translateX(-50%) translatey(-50%);
+    color: black;
+    font-size: 3.5rem;
+    font-weight: 600;
+}
+.bg1{
+    background-image: url(sport-1.jpg);
+}
+.bg2{
+    background-image: url(sport-2.jpg);
+}
+.bg3{
+    background-image: url(sport-3.jpg);
+}
